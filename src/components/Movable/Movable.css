@@ -1,0 +1,27 @@
+.Movable_container{
+    width: 79%;
+    height: 200px;
+    margin-left: 6%;
+    margin-top: 30px;
+    margin: auto;
+    margin-top: 50px;
+}
+.mavable_img_container{
+    width: 00px;
+    height: 200px;
+}
+.mavable_img_container>img{
+    width: 97%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+
+@media only screen and (max-width: 480px){
+    .Movable_container{
+    
+        margin-top: 0px;
+     
+    }
+    
+}

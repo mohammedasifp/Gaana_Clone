@@ -1,0 +1,35 @@
+.move{
+    width: 80%;
+    height: 250px;
+  margin-left: 6%;
+  margin: auto;
+}
+#movee{
+    margin-top: 30px;
+}
+.sliderimg{
+    width: 90%;
+    height: 170px;
+    border-radius: 5px;
+}
+.trending_headding{
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.rsliderimg{
+    width: 90%;
+    border-radius: 50%;
+}
+#lmove{
+    margin-top: 30px;
+}
+@media only screen and (max-width: 480px){
+    .sliderimg{
+        width: 97%;
+        height: 150px;
+        border-radius: 5px;
+        margin-right: 3px;
+    }
+    
+}

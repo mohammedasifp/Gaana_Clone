@@ -1,0 +1,46 @@
+p{
+    margin-right: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    line-break: 12px;
+}
+.mainBox{
+    background-color: hsl(240, 11%, 98%);
+    /* position: fixed; */
+    width: 100%;
+    bottom: 10px;
+}
+.heading{
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 400px;
+    text-align: center;
+}
+.small{
+    font-size: 12px;
+    line-height:16px;
+    font-weight: 400px;
+    text-align: center;
+}
+.icon{
+    width: 30px;
+    height: 30px;
+}
+.icon1{
+    width: 34px;
+    height: 34px;
+}
+.thirdDiv{
+    display: flex;
+    justify-content: space-around;
+}
+.midDiv{
+    display: flex;
+    justify-content: center;
+}
+li{
+    display: flex;
+    font-size: 13px;
+    font-weight: 400px;
+    line-height: 30px;
+}

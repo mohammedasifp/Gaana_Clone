@@ -1,0 +1,199 @@
+.img_container{
+  margin-left: 6%;
+  margin-top: 16px;
+  width: 75%;
+  
+}
+.img_container>img{
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+}
+  .trending_headers{
+    width: 75%;
+    height: 40px;
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
+    margin-left: 6%;
+  margin-bottom: -10px;
+    font-family: proximanova-regular-webfont, Arial, sans-serif;
+  }
+  .track{
+    margin-right: 0px;
+}
+.trending_Container{
+    width: 75%;
+    justify-content: space-between;
+    margin-left: 6%;
+    font-size: 13px;
+    font-family: proximanova-regular-webfont, Arial, sans-serif;
+  }
+  .tending_single{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+  }
+  .img_div{
+    display: flex;
+    width: 46%;
+    gap: 30px;
+    font-weight: bold;
+  }
+  .img_div>p:hover{
+    cursor: pointer;
+  }
+  .mainimg{
+    height: 45px;
+    width: 45px;
+  }
+  .artist{
+    width: 50%;
+    color: rgb(182, 177, 177);
+  }
+  .duration{
+    display: flex;
+    justify-content: flex-end;
+    color: rgb(104, 98, 98);
+    
+  }
+  hr{
+    color: rgb(255, 255, 255);
+     
+  }
+
+
+
+
+
+  /* Audio */
+
+  .audio_container{
+    width: 90%;
+     border: 2px solid red; 
+    height: 390px;
+    margin: auto;
+    margin-top: 25px;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 5px;
+    background-color: whitesmoke;
+   }
+   .audio_container1{
+    width: 70%;
+    /* border: 1px solid red; */
+    display: flex;
+   
+    color: white;
+  }
+  .audio_container11{
+    width: 74%;
+    /* border: 1px solid red; */
+  }
+  .main_image{
+    width: 90%;
+    height: 100%;
+    border-radius: 20px;
+  
+  }
+ 
+  .audio_container12>p{
+    border: 1px solid red;
+      height: 50px;
+      border-radius: 5px;  
+      display:flex;
+      align-items: center; 
+      margin-top: 14%;
+  }
+  .songdetails{
+    color: #ee2a24;
+   margin-left: -20px;
+  }
+  .spa{
+    color: gray;
+    font-weight: bold;
+  }
+
+  .play{
+    margin-top: 7%;
+    border: 1px solid red;
+   margin-left: -20px;
+   border-radius: 5px; 
+  }
+.audio_container2{
+    margin-left: 7px;
+    overflow: hidden;
+    overflow: scroll;
+    width: 30%;
+  }
+  .audio_container2_img{
+    height: 50px;
+  } 
+.audio_container21{
+    display: flex;
+    gap: 15px;
+    cursor: pointer;
+  }
+  .audio_container211{
+    width: 40%;
+    /* border: 1px solid green; */
+  }
+  .audio_container211>img{
+    width:130px;
+    height: 60px;
+    border-radius: 3px;
+  }
+  .audio_container212{
+    width: 60%;
+    font-size: 13px;
+    color: gray;
+    display: flex;
+    align-items:center
+}
+.tending_single>div>img:hover{
+  cursor: pointer;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+ .songname{
+   margin-left: 10px;
+ }
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+ 
+
+ 
+
+ 
+
+
+
+
+
+
+
+ 
+  
+ 
+ 
+ 
+
+ 
+

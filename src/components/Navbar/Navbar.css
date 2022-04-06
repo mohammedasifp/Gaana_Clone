@@ -1,0 +1,23 @@
+.nav_links{
+    
+    display: flex;
+    justify-content: space-around;
+    font-family: proximanova-regular-webfont, Arial, sans-serif;
+    font-size: 12px;
+    width: 75%;
+    margin-left: 6%;
+    margin: auto;
+    margin-top: 30px;
+     
+}
+.nav_links>a:hover{
+    text-decoration: underline red;
+}
+
+@media only screen and (max-width: 480px){
+    .nav_links{
+         opacity: 0;
+         margin-top: 0px;
+    }
+
+}
