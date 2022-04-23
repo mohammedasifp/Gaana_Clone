@@ -5,7 +5,7 @@ export const Navbar=()=>{
    
     return(
         <div className="nav_links">
-            <Link to="/">All</Link>
+            <Link to="/home">All</Link>
             <Link to="/Trending">Trending Songs</Link>
             <Link to="/New">New Songs</Link>
             <Link to="/old">Old Songs</Link>

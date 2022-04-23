@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import './Radioo.css'
+import { Header } from "../Header/Header";
+import { Navbar } from "../Navbar/Navbar";
 
 
 export const Radio=()=>{
@@ -40,6 +42,8 @@ export const Radio=()=>{
 
 return(
     <div>
+    <Header/>
+    <Navbar/>
     <div><Movable/></div>
 
     <div className="radio_container">

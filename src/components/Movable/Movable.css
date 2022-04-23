@@ -19,9 +19,10 @@
 
 @media only screen and (max-width: 480px){
     .Movable_container{
-    
         margin-top: 0px;
-     
+    }
+    .Movable_container{
+        width: 96%;
     }
     
 }

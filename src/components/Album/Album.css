@@ -19,10 +19,10 @@
     margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    row-gap: 0px;
+    row-gap: 10px;
  }
  .newimg{
-     width: 150px;
+     width: 200px;
      height: 170px;
      border-radius: 5px;
      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;

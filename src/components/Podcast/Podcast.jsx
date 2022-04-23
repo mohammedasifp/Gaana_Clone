@@ -2,6 +2,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import './Podcast.css'
+import { Header } from "../Header/Header";
+import { Navbar } from "../Navbar/Navbar";
 
 
 export const Podcast=()=>{
@@ -42,6 +44,8 @@ export const Podcast=()=>{
 
     return(
         <div>
+        <Header/>
+        <Navbar/>
             <div className="move podcast_container" >
      <div className="trending_headding">Gaana Podcast Originals</div>
       <div>

@@ -2,15 +2,19 @@ import { type } from "@testing-library/user-event/dist/type"
 import { useEffect, useState } from "react"
 import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
+import { Header } from "../Header/Header"
+import { Navbar } from "../Navbar/Navbar"
 
 export const Oldsongs=()=>{
    
-var data=useSelector(store=>store.songs)  
+var data=useSelector(store=>store.song.songs)  
  var arr=data.filter((elem)=>{return elem.type=="old"})
     
     return(
         <div>
-                <div className="img_container"><img src="https://cdn.bdc-tv.com/wp-content/uploads/2020/08/p3.jpg"  /></div>
+        <Header/>
+        <Navbar/>
+                {/* <div className="img_container"><img src="https://cdn.bdc-tv.com/wp-content/uploads/2020/08/p3.jpg"  /></div> */}
 
            
             <div className="trending_headers">
@@ -20,7 +24,7 @@ var data=useSelector(store=>store.songs)
             </div>
            
             <div className="trending_Container">
-            <hr/>
+            
             {arr.map((elem)=>{
                 return(
                    <>
@@ -40,7 +44,7 @@ var data=useSelector(store=>store.songs)
                          <div className="artist"><p>{elem.artists}</p></div>
                          <div className="duration">{elem.duration}</div>
                     </div>
-                    <hr/>
+                    
                    </>
                 )
             })}

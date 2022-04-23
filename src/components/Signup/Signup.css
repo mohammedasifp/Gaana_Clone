@@ -1,128 +1,65 @@
-.container{
-  display: flex;
-  /* border: 1px solid red; */
-  height: 500px;
-  width: 800px;
-  margin-left:20%;
-  margin-top: 3%;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
-.imgganna{
- margin-top: 17%;
- margin-left: 27%;
-} 
-
-h2{
-  margin-top: 7%;
-  margin-left: 27%;
-
-}
-.left>p1{
-  color: rgb(163,163,167);
-  font-size: 12px;
-  text-decoration: solid;
-  font-weight: 500;
-  margin-left: 20%;
-  text-align: center;
-  align-items: center;
-  
-}
-#field > input {
-  margin-top: 28px;
-  width: 77%;
-  height: 30px;
-  border: none;
-  padding: 0 5 px;
-  background: none;
-  margin-left: 40px;
-  outline: none;
-  border-bottom: 1px solid  rgb(204,204,204);
-}
-
-#field> button {
-  display: block;
-  width: 80%;
-  margin-top: 5%;
-  margin-left: 8%;
-border-radius: 20px;
-  height: 40px;
-  outline: none;
-  border: none;
-  background-color: rgb(222,222,222);
-  color:  rgb(168,168,180);
-  cursor: pointer;
-}
-.or{
-   background: #fff; 
-   width: 150px;
-  margin:-19px auto 10px ; 
-  margin-top: 7%;
-}
-.btnbox{
+.log{
+    background-color: red;
+    height: 40px;
     display: flex;
-   margin-left: 5%;
-   margin-top: 5%;
+    justify-content: center;
+    align-items: center;
+
 }
- 
-.btnbox1> button{
-    
-    display: block;
-    width: 230%;
-    margin-top: 3%;
-    margin-left: 10%;
-    border-radius: 20px;
-    height: 28px;
-    outline: none;
-    border: none;
-    background-color: rgb(7, 8, 8);
+.log>p{
     color: white;
-    cursor: pointer;
+    font-size: 20px;
 }
-.btnbox2>button{
-  margin-left: 250%;
-  display: block;
-  width: 240%;
-  margin-top: 3%;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  border-radius: 20px;
-  height: 28px;
-  outline: none;
-  border: none;
-  background-color:  white;
-  color: black;
-  cursor: pointer;
-}  
-.right .head .cross  {
-position: absolute;
-z-index:111;
-align-items: flex-start;
-color: #fff;
-font-weight: 700;
-  
-  margin-left: 28%;
- 
+button{
+    height: 30px;
+    width: 50px;
+}
+.signup{
+    display: flex;
+    justify-content: center;
 }
 
-.right .head .text  {
-position: absolute;
-z-index:111;
-align-items: flex-start;
-color: #fff;
-font-weight: 700;
-  margin-top: 5%;
-  margin-left: 8%;
-/* margin-bottom: -100PX; */
+.form_container{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(245, 245, 245, 0.687);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+     padding: 10px;
 }
-.right{
-  width:450px;
+form{
+    background-color: white;
+    width: 30%;
+    height: 77%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#lab{
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+}
+.signinp{
+    width: 250px;
+    height: 23px;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+#subbtn{
 
-  /* border: 1px solid red; */
+    width: 70px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
 
 }
-.left{
-  /* border: 1px solid blue; */
-  width:490px;
-
-   
+#msg{
+    color: red;
 }

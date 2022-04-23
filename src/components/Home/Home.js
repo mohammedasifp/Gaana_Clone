@@ -7,21 +7,28 @@ import "slick-carousel/slick/slick-theme.css";
 import "./Home.css"
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import { Movable } from "../Movable/Movable";
-import { type } from "@testing-library/user-event/dist/type";
-
+import { Header} from "../Header/Header";
+import { Navbar } from "../Navbar/Navbar";
+import { songsaction } from "../Redux/data/DataAction";
+import { useNavigate } from "react-router-dom";
 
 
 
 export const Home=()=>{
+  const navigate=useNavigate()
+  const auth=useSelector(store=>store.login.user.token)
+  // if(!auth){
+  //   navigate('/login')
+  // }
+
     const dispatch=useDispatch()   
      useEffect(()=>{
-          fetch("https://gaana-apiss.herokuapp.com/songs").then(Response=>Response.json()).then(data=>dispatch({type:"songs",payload:data.songs}))
+          fetch("https://kudachi.herokuapp.com/allsongs").then(Response=>Response.json()).then(data=>dispatch(songsaction(data)))
      },[])
    
 
-var data=useSelector(store=>store.songs)  
+var data=useSelector(store=>store.song.songs)  
 var newarr=data.filter((elem)=>{return elem.type=="new"})
 var oldarray=data.filter((elem)=>{return elem.type=="old"})
 var trendingarr=data.filter((elem)=>{return elem.type=="Trending"})
@@ -85,7 +92,8 @@ function SampleNextArrow(props) {
 
 return (
    <div className="slider_continer">
-      
+          <Header/>
+    <Navbar/>
     <div>
       <Movable/>
     </div>
@@ -95,7 +103,7 @@ return (
       <div>
           <div>      
              <Slider {...settings} >
-              {trendingarr.map((elem)=>{return <div><Link to="/trending"><img className="sliderimg" src={elem.cover_image} /></Link></div>},[])}
+              {trendingarr.map((elem)=>{return <div><Link to="/Trending"><img className="sliderimg" src={elem.cover_image} /></Link></div>})}
               </Slider>
             </div>
       </div>
@@ -108,7 +116,7 @@ return (
       <div>
           <div>      
              <Slider {...settings} >
-              {newarr.map((elem)=>{return <div><Link to="/new"><img className="sliderimg" src={elem.cover_image} /></Link></div>},[])}
+              {newarr.map((elem)=>{return <div><Link to="/new"><img className="sliderimg" src={elem.cover_image} /></Link></div>})}
               </Slider>
             </div>
       </div>
@@ -163,7 +171,7 @@ return (
       <div>
           <div>      
              <Slider {...settings} >
-              {albumarr.map((elem)=>{return <div><Link to="/new"><img className="sliderimg" src={elem.cover_image} /></Link></div>},[])}
+              {albumarr.map((elem)=>{return <div><Link to="/new"><img className="sliderimg" src={elem.cover_image} /></Link></div>})}
               </Slider>
             </div>
       </div>
@@ -211,11 +219,11 @@ return (
      </div>
 
      <div className="move" id="lmove">
-     <div className="trending_headding">Top Playlists</div>
+     <div className="trending_headding">Old Songs</div>
       <div>
           <div>      
              <Slider {...settings} >
-              {oldarray.map((elem)=>{return <div><Link to="/new"><img className="sliderimg" src={elem.cover_image} /></Link></div>},[])}
+              {oldarray.map((elem)=>{return <div><Link to="/old"><img className="sliderimg" src={elem.cover_image} /></Link></div>})}
               </Slider>
             </div>
       </div>

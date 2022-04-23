@@ -1,7 +1,7 @@
 .img_container{
   margin-left: 6%;
   margin-top: 16px;
-  width: 75%;
+  width: 85%;
   
 }
 .img_container>img{
@@ -31,12 +31,16 @@
   }
   .tending_single{
     width: 100%;
-    height: 45px;
+    height: 55px;
     display: flex;
     align-items: center;
+    margin-bottom: 24px;
+    background-color: whitesmoke;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
   }
   .img_div{
     display: flex;
+    align-items: center;
     width: 46%;
     gap: 30px;
     font-weight: bold;
@@ -45,8 +49,8 @@
     cursor: pointer;
   }
   .mainimg{
-    height: 45px;
-    width: 45px;
+    height: 55px;
+    width: 55px;
   }
   .artist{
     width: 50%;
@@ -58,10 +62,7 @@
     color: rgb(104, 98, 98);
     
   }
-  hr{
-    color: rgb(255, 255, 255);
-     
-  }
+ 
 
 
 

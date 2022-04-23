@@ -5,6 +5,8 @@ import { Link } from "react-router-dom"
 import './Album.css'
 import React, { Component } from "react";
 import Slider from "react-slick";
+import { Header } from "../Header/Header"
+import { Navbar } from "../Navbar/Navbar"
 
 export const Albumsongs=()=>{
    
@@ -17,19 +19,20 @@ export const Albumsongs=()=>{
           };
 
    
-var data=useSelector(store=>store.songs)  
+var data=useSelector(store=>store.song.songs)  
  var arr=data.filter((elem)=>{return elem.type=="album"})
     return(
         <div>
-
+        <Header/>
+        <Navbar/>
         <div className="maindivimg">
             
-       <Slider rif={slider => (this.slider = slider)} {...settings}>
+       {/* <Slider rif={slider => (this.slider = slider)} {...settings}>
         <div className="im_container">
           <img src="https://i.pinimg.com/736x/ee/12/41/ee1241842ab36f3ba440a33d202acfb1.jpg" />
         </div>
         <div className="im_container"><img src="https://truepricedeals.in/wp-content/uploads/2019/06/banner-on-all.jpg"/></div>
-        </Slider>
+        </Slider> */}
         </div>
 
 

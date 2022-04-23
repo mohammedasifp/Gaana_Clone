@@ -2,12 +2,14 @@ import { getByDisplayValue } from "@testing-library/react";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom"
+import { Header } from "../Header/Header";
+import { Navbar } from "../Navbar/Navbar";
 
 
 export const Newsongsaudio=()=>{
     const [songdata,setSongdata]=useState([]);
     const {id}=useParams();
-    const data=useSelector(store=>store.songs)
+    const data=useSelector(store=>store.song.songs)
     var arr=data.filter((elem)=>{return elem.type=="new"})
 
     const playarr=data.filter((elem)=>{
@@ -26,6 +28,8 @@ export const Newsongsaudio=()=>{
    console.log(songdata.url)
     return(
         <div>
+        <Header/>
+        <Navbar/>
         <div className="audio_container">
            <div className="audio_container1">
 

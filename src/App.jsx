@@ -1,8 +1,8 @@
 import { Footer } from './components/Footer/footer';
-import { Header } from './components/Header/header';
+
 import { Route, Routes } from 'react-router-dom';
 import { PlaySong } from './components/PlaySong/PlaySong';
-import { DemoHome } from './components/demoHome';
+
 import logo from './logo.svg';
 import './App.css';
 import { Navbar } from './components/Navbar/Navbar';
@@ -17,18 +17,16 @@ import { Albumsongs } from './components/Album/Album';
 import { Albumsongsaudio } from './components/Album/Albumaudio';
 import { Radio } from './components/Radio/Radio';
 import { Podcast } from './components/Podcast/Podcast';
-import {Signup} from "./components/Signup/Signup.js"
-import Signin from './components/Signin/Signin';
+import { Header } from './components/Header/Header';
+import { Signup } from './components/Signup/Signup';
+import { Login } from './components/Longin/Longin';
+
 
 function App() {
   return (
     <div className="App">
-    <Header/>
-    <Navbar/>
     <Routes>
-    
-    <Route path='/play/:id' element={<PlaySong/>}/> 
-     <Route path='/' element={<Home/>}/> 
+      <Route path='/home' element={<Home/>}/> 
       <Route path='/Trending' element={ <Trending/>} />
       <Route path='/trending/:id' element={<Trendingaudio/>}/>
       <Route path='/old' element={ <Oldsongs/>} />
@@ -39,10 +37,9 @@ function App() {
       <Route path='/album/:id' element={<Albumsongsaudio/>}/>
       <Route path="/radio" element={<Radio/>}/>
       <Route path='/podcast' element={<Podcast/>}/>
-      <Route path='/Signin' element={<Signin/>}/>
-      <Route path='/Signup' element={<Signup/>}/>
+      <Route path="/" element={<Signup/>} />
+      <Route path='/login' element={<Login/>}/>
     </Routes>      
-   
     </div>
   );
 }
