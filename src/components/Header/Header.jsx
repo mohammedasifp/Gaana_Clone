@@ -56,11 +56,11 @@ export const Header = () => {
 
 
         <div className='songplaystrip'>
-        <img id='simage' src={play.image}/>
-        <div>
-               <audio id='audo' src={play.media_url} controls preload="metadata" >
-                    <source src={play.media_url}/>
-               </audio>
+           <img id='simage' src={play.image}/>
+           <div>
+              <audio id='audo' src={play.media_url} controls preload="metadata" >
+                <source src={play.media_url}/>
+              </audio>
             </div>
             <p>{play.song}</p>
         </div>
