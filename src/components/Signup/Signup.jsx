@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 import {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
 
- 
-
 export const Signup=()=>{
 const [userdata,setUserdata]=useState({})
 const [token,setToken]=useState("")
@@ -15,7 +13,6 @@ const handlechange=(e)=>{
     setUserdata({...userdata,[id]:value})
 }
 
-
 const senddata=(e)=>{
     e.preventDefault();
     fetch("https://kudachi.herokuapp.com/register",{
@@ -24,7 +21,6 @@ const senddata=(e)=>{
       headers:{"content-type":"application/json"}
     }).then(Response=>Response.json()).then(data=>{if(data.token){navigate('/login')}})
 }
-
 
    return(
        <div>
