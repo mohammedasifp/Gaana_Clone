@@ -7,8 +7,14 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import { Header } from "../Header/Header"
 import { Navbar } from "../Navbar/Navbar"
+import { useNavigate } from "react-router-dom"
 
 export const Albumsongs=()=>{
+  const token=useSelector(store=>store.login.user.token)
+const navigate=useNavigate();
+if(!token){
+   navigate("/login") 
+} 
    
         const settings = {
             

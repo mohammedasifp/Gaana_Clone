@@ -10,7 +10,7 @@
   height: 200px;
 }
   .trending_headers{
-    width: 75%;
+    width: 80%;
     height: 40px;
     display: flex;
     margin-top: 40px;
@@ -23,7 +23,7 @@
     margin-right: 0px;
 }
 .trending_Container{
-    width: 75%;
+    width: 80%;
     justify-content: space-between;
     margin-left: 6%;
     font-size: 13px;
@@ -71,30 +71,31 @@
   /* Audio */
 
   .audio_container{
-    width: 90%;
+    width: 70%;
      border: 2px solid red; 
-    height: 390px;
+    height: 360px;
     margin: auto;
     margin-top: 25px;
-    display: flex;
+    /* display: flex; */
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 5px;
     background-color: whitesmoke;
    }
    .audio_container1{
-    width: 70%;
+    width: 100%;
     /* border: 1px solid red; */
     display: flex;
-   
+   justify-content: space-around;
+   /* align-items: center; */
     color: white;
   }
   .audio_container11{
-    width: 74%;
+    width: 50%;
     /* border: 1px solid red; */
   }
   .main_image{
     width: 90%;
-    height: 100%;
+    height: 360px;
     border-radius: 20px;
   
   }
@@ -105,7 +106,7 @@
       border-radius: 5px;  
       display:flex;
       align-items: center; 
-      margin-top: 14%;
+       margin-bottom: 17%;
   }
   .songdetails{
     color: #ee2a24;
@@ -123,10 +124,8 @@
    border-radius: 5px; 
   }
 .audio_container2{
-    margin-left: 7px;
-    overflow: hidden;
-    overflow: scroll;
-    width: 30%;
+
+    width: 90%;
   }
   .audio_container2_img{
     height: 50px;
@@ -162,7 +161,67 @@ a{
  .songname{
    margin-left: 10px;
  }
+ .trending_headers{
+  width: 90%;
+  font-size: 14px;
+  margin-top: 15px;
+ }
+ .trending_Container{
+  width: 90%;
+ }
+ @media only screen and (max-width:480px){
+  .audio_container{
+    width: 97%;
+    margin-top: 0px;
+    height: 480px;
+  }
 
+  .audio_container1{
+    width: 100%;
+    margin:auto;
+     display: flex; 
+     flex-direction: column;
+  }
+  .audio_container11{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* border: 1px solid red; */
+  }
+  .main_image{
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+  
+  }
+  .audio_container12{
+    margin: auto;
+    margin-top: 10px;
+    width: 100%;
+   
+
+  }
+  .audio_container12>p{
+    margin: auto;
+     margin-bottom: 10px;
+     width: 95%;
+    
+  }
+  .play{
+    width: 100%;
+    margin-top: 3%;
+    border: 1px solid red;
+    background-color: red;
+   margin-left: -0px;
+   border-radius: 5px; 
+   margin: auto;
+  }
+  audio{
+    margin-left: 23px;
+    margin-top: 1px;
+    color: red;
+  }
+ }
 
 
 

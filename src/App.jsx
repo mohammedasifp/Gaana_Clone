@@ -1,8 +1,5 @@
 import { Footer } from './components/Footer/footer';
-
 import { Route, Routes } from 'react-router-dom';
-import { PlaySong } from './components/PlaySong/PlaySong';
-
 import logo from './logo.svg';
 import './App.css';
 import { Navbar } from './components/Navbar/Navbar';
@@ -20,6 +17,8 @@ import { Podcast } from './components/Podcast/Podcast';
 import { Header } from './components/Header/Header';
 import { Signup } from './components/Signup/Signup';
 import { Login } from './components/Longin/Longin';
+import { Favourite } from './components/Favourite/Favourite';
+import {Favouriteaudio} from './components/Favourite/Favouriteaudio'
 
 
 function App() {
@@ -39,6 +38,8 @@ function App() {
       <Route path='/podcast' element={<Podcast/>}/>
       <Route path="/" element={<Signup/>} />
       <Route path='/login' element={<Login/>}/>
+      <Route path='/fav' element={<Favourite/>}/>
+      <Route path='/fav/:id' element={<Favouriteaudio/>}/>
     </Routes>      
     </div>
   );

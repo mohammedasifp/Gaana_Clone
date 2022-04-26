@@ -2,8 +2,8 @@
 .move{
     width: 80%;
     height: 250px;
-  margin-left: 6%;
-  margin: auto;
+    margin-left: 6%;
+    margin: auto;
 }
 #movee{
     margin-top: 30px;
@@ -23,7 +23,7 @@
     border-radius: 50%;
 }
 #lmove{
-    margin-top: 100px;
+    margin-top: 70px;
 }
 @media only screen and (max-width: 480px){
     .sliderimg{
@@ -34,7 +34,12 @@
      
     }
     .move{
-        width: 96%;
+        width: 98%;
+        margin-left: 1%;
+        
+    }
+    #lmove{
+        margin-top: 0px;
     }
     
 }

@@ -38,3 +38,32 @@
     margin-bottom: -38px;
     color: red;
 }
+#addtofav{
+    width: 70px;
+    height: 40px;
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+    cursor: pointer;
+    font-weight: bold;
+}
+@media only screen and (max-width:480px){
+    .new_Container{
+        width: 80%;
+       margin-left: 1%;
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 10px;
+        row-gap: 20px;
+       
+     }
+     .newimg{
+        width: 170px;
+        height: 170px;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+    }
+   
+}

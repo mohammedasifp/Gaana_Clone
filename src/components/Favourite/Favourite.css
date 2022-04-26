@@ -1,0 +1,38 @@
+.favcontainer{
+    width: 95%;
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    row-gap: 20px;
+    margin-top: 20px;
+    padding: 10px;
+}
+#favimage{
+    width:320px;
+    height: 200px;
+}
+#rembtn{
+    width: 150px;
+    background-color: red;
+    border: 1px solid red;
+    color: white;
+    font-weight: bold;
+}
+
+@media only screen and (max-width:480px){
+    .favcontainer{
+        grid-template-columns: repeat(1,1fr);
+        margin-top: 0px;
+        padding: 0px;
+    }
+    #favimage{
+        width:100%;
+        height: 200px;
+    }
+    #rembtn{
+        width: 100px;
+    }
+}

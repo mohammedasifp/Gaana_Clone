@@ -1,19 +1,13 @@
-.new_Container{
+/* .new_Container{
    width: 80%;
   margin-left: 6%;
    margin-top: 50px;
    display: grid;
-   grid-template-columns: repeat(6,1fr);
+   grid-template-columns: repeat(5,1fr);
    row-gap: 0px;
 
 }
-.newimg{
-    width: 140px;
-    height: 170px;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
-}
 .newhead{
     margin-top: -5px;
     font-size: 13px;
@@ -23,4 +17,4 @@
     margin-left: 6%;
     margin-bottom: -38px;
     color: red;
-}
+} */

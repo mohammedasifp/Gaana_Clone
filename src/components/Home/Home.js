@@ -17,8 +17,8 @@ import { useNavigate } from "react-router-dom";
 
 export const Home=()=>{
   const navigate=useNavigate()
-  const auth=useSelector(store=>store.login.user.token)
-  // if(!auth){
+  const token=useSelector(store=>store.login.user.token)
+  // if(!token){
   //   navigate('/login')
   // }
 
@@ -167,11 +167,11 @@ return (
 
 
      <div className="move">
-     <div className="trending_headding">Romance</div>
+     <div className="trending_headding">Album</div>
       <div>
           <div>      
              <Slider {...settings} >
-              {albumarr.map((elem)=>{return <div><Link to="/new"><img className="sliderimg" src={elem.cover_image} /></Link></div>})}
+              {albumarr.map((elem)=>{return <div><Link to="/album"><img className="sliderimg" src={elem.cover_image} /></Link></div>})}
               </Slider>
             </div>
       </div>

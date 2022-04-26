@@ -5,9 +5,15 @@ import { Link } from "react-router-dom"
 import { Header } from "../Header/Header"
 import { Navbar } from "../Navbar/Navbar"
 import './Trending.css'
+import { useNavigate } from "react-router-dom"
 
 
 export const Trending=()=>{
+const token=useSelector(store=>store.login.user.token)
+const navigate=useNavigate();
+if(!token){
+   navigate("/login") 
+} 
 const [trendingdata,setTrendingdata]=useState([])    
 var data=useSelector(store=>store.song.songs)
    

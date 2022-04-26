@@ -1,12 +1,16 @@
 import { type } from "@testing-library/user-event/dist/type"
 import { useEffect, useState } from "react"
 import { useSelector } from "react-redux"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { Header } from "../Header/Header"
 import { Navbar } from "../Navbar/Navbar"
 
 export const Oldsongs=()=>{
-   
+const token=useSelector(store=>store.login.user.token)
+const navigate=useNavigate();
+if(!token){
+   navigate("/login") 
+}   
 var data=useSelector(store=>store.song.songs)  
  var arr=data.filter((elem)=>{return elem.type=="old"})
     

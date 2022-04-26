@@ -4,10 +4,17 @@ import { useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom"
 import { Header } from "../Header/Header";
 import { Navbar } from "../Navbar/Navbar";
+import { useNavigate } from "react-router-dom";
 
 
 
 export const Trendingaudio=()=>{
+const mongoid=useSelector(store=>store.login.user.user._id);
+const token=useSelector(store=>store.login.user.token);
+const navigate=useNavigate();
+if(!token){
+   navigate("/login") 
+} 
     const [songdata,setSongdata]=useState([]);
     const {id}=useParams();
     const data=useSelector(store=>store.song.songs)
@@ -25,14 +32,23 @@ export const Trendingaudio=()=>{
         })
         setSongdata(playarr[0])   
     }
-   console.log(songdata.url)
+    const senddata=()=>{
+        // setSongdata({...songdata,user_id:user})
+        // console.log(songdata)
+        fetch("https://kudachi.herokuapp.com/fav",{
+            method:"POST",
+            body:JSON.stringify({...songdata,user_id:mongoid}),
+            headers:{"content-type":"application/json"}
+        })}
     return(
         <div>
         <Header/>
         <Navbar/>
         <div className="audio_container">
            <div className="audio_container1">
-
+            <div>
+              <button onClick={senddata} id="addtofav">Add to Favourite</button>
+            </div>
               <div className="audio_container11">
                   <img className="main_image" src={songdata.cover_image} />
               </div>
@@ -48,7 +64,7 @@ export const Trendingaudio=()=>{
                </div>
            </div>
               
-                <div className="audio_container2">
+                {/* <div className="audio_container2">
                {data.map((elem)=>{
                return(
                    <div className="audio_container21">
@@ -57,7 +73,7 @@ export const Trendingaudio=()=>{
                    </div>
                )
               })} 
-           </div>
+           </div> */}
           
         </div>
 

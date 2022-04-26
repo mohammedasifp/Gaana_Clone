@@ -4,9 +4,16 @@ import "slick-carousel/slick/slick-theme.css";
 import './Podcast.css'
 import { Header } from "../Header/Header";
 import { Navbar } from "../Navbar/Navbar";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 
 export const Podcast=()=>{
+  const token=useSelector(store=>store.login.user.token)
+const navigate=useNavigate();
+if(!token){
+   navigate("/login") 
+} 
     function SampleNextArrow(props) {
 
         const { className, style, onClick } = props;

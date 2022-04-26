@@ -4,7 +4,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 .log>p{
     color: white;
@@ -62,4 +61,30 @@ form{
 }
 #msg{
     color: red;
+}
+
+@media only screen and (max-width: 480px){
+
+    form{
+        background-color: white;
+        width: 75%;
+        height: 77%
+    }
+    .signinp{
+        width: 200px;
+        height: 23px;
+        font-size: 20px;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+    #lab{
+        font-size: 14px;
+        color: red;
+        font-weight: bold;
+    }
+    .log>p{
+        color: white;
+        font-size: 14px;
+    }
+
 }

@@ -1,14 +1,18 @@
 import { type } from "@testing-library/user-event/dist/type"
 import { useEffect, useState } from "react"
 import { useSelector } from "react-redux"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { Header } from "../Header/Header"
 import { Navbar } from "../Navbar/Navbar"
 import './Newsongs.css'
 
 export const Newsongs=()=>{
-   
-var data=useSelector(store=>store.song.songs)  
+ var data=useSelector(store=>store.song.songs) 
+ var token=useSelector(store=>store.login.user.token) 
+ var navigate=useNavigate();
+ if(!token){
+    navigate("/login")
+ }
  var arr=data.filter((elem)=>{return elem.type=="new"})
     
     return(
