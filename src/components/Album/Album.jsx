@@ -46,7 +46,7 @@ var data=useSelector(store=>store.song.songs)
             <div className="new_Container">
                    {arr.map((elem)=>{
                    return(
-                             <>
+                             <div key={elem.id}>
                          <div className="New_single">
                          
                                <div>
@@ -62,7 +62,7 @@ var data=useSelector(store=>store.song.songs)
                                 </div>
                          </div>
                 
-                   </>
+                   </div>
                 )
             })}
             </div>

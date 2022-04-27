@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 
 
 export const Radio=()=>{
-  const token=useSelector(store=>store.login.user.token)
+const token=useSelector(store=>store.login.user.token)
 const navigate=useNavigate();
 if(!token){
    navigate("/login") 

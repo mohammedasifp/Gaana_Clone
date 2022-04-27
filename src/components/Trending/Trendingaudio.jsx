@@ -5,7 +5,7 @@ import { Link, useParams } from "react-router-dom"
 import { Header } from "../Header/Header";
 import { Navbar } from "../Navbar/Navbar";
 import { useNavigate } from "react-router-dom";
-
+import axios from "axios";
 
 
 export const Trendingaudio=()=>{
@@ -15,7 +15,7 @@ const navigate=useNavigate();
 if(!token){
    navigate("/login") 
 } 
-    const [songdata,setSongdata]=useState([]);
+    const [songdata,setSongdata]=useState({user_id:mongoid});
     const {id}=useParams();
     const data=useSelector(store=>store.song.songs)
 
@@ -30,16 +30,20 @@ if(!token){
            const playarr=data.filter((elem)=>{
             return elem.id==x;
         })
-        setSongdata(playarr[0])   
+        let obj=playarr[0]
+        delete obj._id
+       setSongdata(obj)  
     }
     const senddata=()=>{
-        // setSongdata({...songdata,user_id:user})
-        // console.log(songdata)
+        //  setSongdata({...songdata,user_id:user})
+        //  console.log(songdata)
         fetch("https://kudachi.herokuapp.com/fav",{
             method:"POST",
             body:JSON.stringify({...songdata,user_id:mongoid}),
             headers:{"content-type":"application/json"}
-        })}
+        })
+        
+    }
     return(
         <div>
         <Header/>
@@ -47,7 +51,7 @@ if(!token){
         <div className="audio_container">
            <div className="audio_container1">
             <div>
-              <button onClick={senddata} id="addtofav">Add to Favourite</button>
+              <button onClick={()=>{senddata()}} id="addtofav">Add to Favourite</button>
             </div>
               <div className="audio_container11">
                   <img className="main_image" src={songdata.cover_image} />

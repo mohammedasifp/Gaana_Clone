@@ -4,10 +4,14 @@ import { Header } from "../Header/Header";
 import { Navbar } from "../Navbar/Navbar";
 import { useSelector } from "react-redux";
 import './Favourite.css'
-
-
+import { useNavigate } from "react-router-dom";
 
 export const Favourite=()=>{
+const token=useSelector(store=>store.login.user.token)
+const navigate=useNavigate();
+    if(!token){
+       navigate("/login") 
+    } 
 const userid=useSelector(store=>store.login.user.user._id)
 console.log(userid)
 const [favdata,setFavdata]=useState([]);

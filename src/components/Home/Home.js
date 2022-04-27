@@ -18,9 +18,9 @@ import { useNavigate } from "react-router-dom";
 export const Home=()=>{
   const navigate=useNavigate()
   const token=useSelector(store=>store.login.user.token)
-  // if(!token){
-  //   navigate('/login')
-  // }
+  if(!token){
+    navigate('/login')
+  }
 
     const dispatch=useDispatch()   
      useEffect(()=>{

@@ -13,7 +13,6 @@ export const Navbar=()=>{
             <Link to="/album">Album</Link>
             <Link to="/radio">Radio</Link>
             <Link to="/podcast">Podcast</Link>
-            <Link to="My">My Music</Link>
         </div>
     )
 

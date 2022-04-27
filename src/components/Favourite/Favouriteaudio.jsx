@@ -2,17 +2,20 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom"
 import { Header } from "../Header/Header"
 import { Navbar } from "../Navbar/Navbar"
+import { useNavigate } from "react-router-dom";
 
 export const Favouriteaudio=()=>{
+const token=useSelector(store=>store.login.user.token)
+const navigate=useNavigate();
+    if(!token){
+       navigate("/login") 
+    } 
 const {id}=useParams();
 const allsongs=useSelector(store=>store.song.songs)
 const playsong=allsongs.filter((elem)=>{
     return elem.id==id;
 })
-
-
-
-    return(
+ return(
     <div>
         <Header/>
         <Navbar/>

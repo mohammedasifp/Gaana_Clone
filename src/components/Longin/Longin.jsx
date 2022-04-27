@@ -23,7 +23,7 @@ const senddata=(e)=>{
       method:"POST",
       body:JSON.stringify(logindata),
       headers:{"content-type":"application/json"}
-  }).then(Response=>Response.json()).then((data)=>{dispatch(loginsuccess(data));if(data.token)navigate("/home"); else{alert(data.message)}}).catch(dispatch(loginfailure))
+  }).then(Response=>Response.json()).then((data)=>{dispatch(loginsuccess(data));if(data.token)navigate("/home"); else{alert(data.message)}}).catch(dispatch(loginfailure()))
 }
 
   return(

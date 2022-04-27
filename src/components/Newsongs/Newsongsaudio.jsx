@@ -30,11 +30,15 @@ if(!token){
            const playarr=data.filter((elem)=>{
             return elem.id==x;
         })
-        setSongdata(playarr[0])   
+         let obj=playarr[0]
+         delete obj._id
+        setSongdata(obj)   
     }
     const senddata=()=>{
         // setSongdata({...songdata,user_id:user})
-        // console.log(songdata)
+        
+         console.log(songdata)
+
         fetch("https://kudachi.herokuapp.com/fav",{
             method:"POST",
             body:JSON.stringify({...songdata,user_id:mongoid}),

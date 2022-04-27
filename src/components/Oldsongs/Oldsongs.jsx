@@ -31,7 +31,7 @@ var data=useSelector(store=>store.song.songs)
             
             {arr.map((elem)=>{
                 return(
-                   <>
+                   <div key={elem.id}>
                    <div className="tending_single">
                          <div className="img_div">
                                <div>
@@ -49,7 +49,7 @@ var data=useSelector(store=>store.song.songs)
                          <div className="duration">{elem.duration}</div>
                     </div>
                     
-                   </>
+                   </div>
                 )
             })}
             </div>

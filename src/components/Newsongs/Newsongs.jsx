@@ -26,9 +26,8 @@ export const Newsongs=()=>{
            
                    {arr.map((elem)=>{
                    return(
-                             <>
-                         <div className="New_single">
-                         
+                             <div key={elem.id}>
+                              <div  className="New_single">
                                <div>
                                    <Link to={`/new/${elem.id}`}>
                                    <img className="newimg" src={elem.cover_image}/>
@@ -42,7 +41,7 @@ export const Newsongs=()=>{
                                 </div>
                          </div>
                 
-                   </>
+                         </div>
                 )
             })}
             </div>

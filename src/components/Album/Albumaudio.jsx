@@ -11,8 +11,8 @@ const mongoid=useSelector(store=>store.login.user.user._id);
 const  token=useSelector(store=>store.login.user.token);
 console.log(token)
 const navigate=useNavigate();
-    // if(!user.token){
-    // navigate("/login")} 
+    if(!token){
+    navigate("/login")} 
 
 const [songdata,setSongdata]=useState([]);
 const {id}=useParams();
@@ -28,7 +28,9 @@ useEffect(
       
 function display(x){
     const playarr=data.filter((elem)=>{return elem.id==x;})
-    setSongdata(playarr[0])   
+    let obj=playarr[0]
+    delete obj._id
+   setSongdata(obj)   
     }
 //    console.log(songdata.url)
 const senddata=()=>{
