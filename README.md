@@ -16,7 +16,7 @@ Gaana clone backend repository:https://github.com/MohammedasifP/Gaana_Clone_Back
   <li>Trending,New,Old,Album songs pages</li>
   <li>Add to favourite list and remove from it</li>
   <li>Login/Signup/log out authentication</li>
-  <li>Responsive</li>
+  <li>Responsive to mobile and laptop screens</li>
 </ul>
 
 ### Thanks 😊.
