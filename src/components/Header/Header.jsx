@@ -65,7 +65,7 @@ export const Header = () => {
          {/*search div */}
         {showsearchdiv?
          <div className='searchdiv'>
-           <button onClick={()=>{setShowsearchdiv(false)}}>Back</button>
+           <button className='back-btn' onClick={()=>{setShowsearchdiv(false)}}>Back</button>
            <div className='searchsongcontainer'>
              {sogsdata.map((elem)=>{
                return(
