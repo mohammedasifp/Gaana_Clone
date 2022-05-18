@@ -15,14 +15,22 @@
     height: 200px;
 }
 #rembtn{
-    width: 150px;
+    width: 100px;
+    height: 30px;
     background-color: red;
     border: 1px solid red;
     color: white;
     font-weight: bold;
+    cursor: pointer;
+}
+#rembtn:active {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
 }
 
-@media only screen and (max-width:480px){
+@media only screen and (max-width:700px){
     .favcontainer{
         grid-template-columns: repeat(1,1fr);
         margin-top: 0px;

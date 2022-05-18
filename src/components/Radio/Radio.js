@@ -49,8 +49,6 @@ if(!token){
 
 return(
     <div>
-    <Header/>
-    <Navbar/>
     <div><Movable/></div>
 
     <div className="radio_container">

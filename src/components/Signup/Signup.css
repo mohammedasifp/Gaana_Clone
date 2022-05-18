@@ -1,18 +1,4 @@
-.log{
-    background-color: red;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.log>p{
-    color: white;
-    font-size: 20px;
-}
-button{
-    height: 30px;
-    width: 50px;
-}
+
 .signup{
     display: flex;
     justify-content: center;
@@ -21,70 +7,80 @@ button{
 .form_container{
     display: flex;
     justify-content: center;
-    background-color: rgba(245, 245, 245, 0.687);
+    background-color: hsl(228,32%,77%);
     background-size: cover;
-    width: 100%;
+    width: 50%;
     height: 100%;
+    margin: auto;
     border-radius: 10px;
      padding: 10px;
+     margin-top: 30px;
+}
+.signup-img-div{
+    width: 55%;
 }
 form{
-    background-color: white;
-    width: 30%;
+    
+    width: 45%;
     height: 77%;
-    text-align: center;
-    padding: 20px;
     border-radius: 10px;
-    margin-top: 30px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* margin-top: 30px; */
 }
 #lab{
-    font-size: 20px;
-    color: red;
+    font-size: 13px;
+    /* color: red; */
     font-weight: bold;
 }
 .signinp{
     width: 250px;
-    height: 23px;
+    height: 20px;
     font-size: 20px;
-    border: 2px solid black;
-    border-radius: 5px;
+    border: 1px solid black;
 }
 #subbtn{
 
     width: 70px;
     height: 30px;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 5px;
     background-color: white;
-
+    cursor: pointer;
+    margin-left: 25%;
+   
 }
-#msg{
-    color: red;
+#subbtn:active{
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
-@media only screen and (max-width: 480px){
+.logn-btn{
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
 
-    form{
-        background-color: white;
-        width: 75%;
-        height: 77%
+@media only screen and (max-width: 700px){
+
+    .form_container{
+        width: 100%;
+        margin-top: 0px;
+    }
+    .signup-img-div{
+        width: 40%;
     }
     .signinp{
-        width: 200px;
-        height: 23px;
-        font-size: 20px;
-        border: 2px solid black;
-        border-radius: 5px;
+        width: 100%;
+    }
+    form{
+        width: 55%;
     }
     #lab{
-        font-size: 14px;
-        color: red;
+        font-size: 11px;
+        /* color: red; */
         font-weight: bold;
     }
-    .log>p{
-        color: white;
-        font-size: 14px;
+    #subbtn{
+        width: 70px;
+        height: 25px;   
     }
-
 }

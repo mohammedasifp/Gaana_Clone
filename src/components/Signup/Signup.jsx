@@ -24,23 +24,23 @@ const senddata=(e)=>{
 
    return(
        <div>
-       <div className='log'>
-       <p>If Account Already Exist login</p>
-       <button onClick={()=>{navigate('/login')}}>Login</button>
-       </div>
            <div  className="form_container">
+              <div className='signup-img-div'>
+                <img width="100%" height="100%" src="https://cdn.dribbble.com/users/919822/screenshots/6634407/untitled-1_4x.jpg?compress=1&resize=1200x900&vertical=top" />
+              </div>
              <form id="signup_form" onSubmit={senddata}>
-               <label id='lab'>First Your First Name</label><br/>
+               <label id='lab'>First Your First Name*</label><br/>
                <input className='signinp' type="text" id="name"  onChange={handlechange} required /><br/><br/>
-               <label id='lab'>Last Your Last Name</label><br/>
+               <label id='lab'>Last Your Last Name*</label><br/>
                <input className='signinp' type="text" id="lastname"  onChange={handlechange} required /><br/><br/>
-               <label id='lab'>Enter Your Email Id</label><br/>
+               <label id='lab'>Enter Your Email Id*</label><br/>
                <input className='signinp' type="text" id="email" onChange={handlechange} required /><br/><br/>
-               <label id='lab'>Enter Your New Password</label><br/>
+               <label id='lab'>Enter Your New Password*</label><br/>
                <input className='signinp' type="text" id="password" onChange={handlechange} required /><br/><br/>
-               <label id='lab'>Enter Your Mobile Number</label><br/>
+               <label id='lab'>Enter Your Mobile Number*</label><br/>
                <input className='signinp' type="text" id="number"  onChange={handlechange} required /><br/><br/>
                <input id='subbtn' type="submit"/>
+               <p>If Account Already Exist login <span onClick={()=>{navigate("/login")}} className='logn-btn'>Login</span></p>
               </form>
            </div>
        </div>

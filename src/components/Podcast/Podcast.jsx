@@ -11,9 +11,9 @@ import { useNavigate } from "react-router-dom";
 export const Podcast=()=>{
   const token=useSelector(store=>store.login.user.token)
 const navigate=useNavigate();
-if(!token){
-   navigate("/login") 
-} 
+// if(!token){
+//    navigate("/login") 
+// } 
     function SampleNextArrow(props) {
 
         const { className, style, onClick } = props;
@@ -51,8 +51,6 @@ if(!token){
 
     return(
         <div>
-        <Header/>
-        <Navbar/>
             <div className="move podcast_container" >
      <div className="trending_headding">Gaana Podcast Originals</div>
       <div>

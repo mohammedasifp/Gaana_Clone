@@ -16,13 +16,9 @@ import { useNavigate } from "react-router-dom";
 
 
 export const Home=()=>{
-  const navigate=useNavigate()
-  const token=useSelector(store=>store.login.user.token)
-  if(!token){
-    navigate('/login')
-  }
+const navigate=useNavigate()
 
-    const dispatch=useDispatch()   
+const dispatch=useDispatch()   
      useEffect(()=>{
           fetch("https://kudachi.herokuapp.com/allsongs").then(Response=>Response.json()).then(data=>dispatch(songsaction(data)))
      },[])
@@ -92,8 +88,6 @@ function SampleNextArrow(props) {
 
 return (
    <div className="slider_continer">
-          <Header/>
-    <Navbar/>
     <div>
       <Movable/>
     </div>

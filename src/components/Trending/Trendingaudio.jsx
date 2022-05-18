@@ -9,79 +9,49 @@ import axios from "axios";
 
 
 export const Trendingaudio=()=>{
-const mongoid=useSelector(store=>store.login.user.user._id);
-const token=useSelector(store=>store.login.user.token);
+var user=useSelector(store=>store.login.user);
+const status=useSelector(store=>store.login.isAuthenticated);
 const navigate=useNavigate();
-if(!token){
-   navigate("/login") 
-} 
-    const [songdata,setSongdata]=useState({user_id:mongoid});
-    const {id}=useParams();
-    const data=useSelector(store=>store.song.songs)
+const {id}=useParams();
+const data=useSelector(store=>store.song.songs)
 
-    const playarr=data.filter((elem)=>{
-        return elem.id==id
-    })
-    useEffect(()=>{
-       display(id)
-    },[])
-  
-    function display(x){
-           const playarr=data.filter((elem)=>{
-            return elem.id==x;
-        })
-        let obj=playarr[0]
-        delete obj._id
-       setSongdata(obj)  
+const playarr=data.filter((elem)=>{return elem.id==id })
+
+const senddata=(obj)=>{
+    fetch("https://kudachi.herokuapp.com/fav",{
+        method:"POST",
+        body:JSON.stringify({...obj,user_id:user.user._id}),
+        headers:{"content-type":"application/json"}})  
     }
-    const senddata=()=>{
-        //  setSongdata({...songdata,user_id:user})
-        //  console.log(songdata)
-        fetch("https://kudachi.herokuapp.com/fav",{
-            method:"POST",
-            body:JSON.stringify({...songdata,user_id:mongoid}),
-            headers:{"content-type":"application/json"}
-        })
-        
-    }
-    return(
-        <div>
-        <Header/>
-        <Navbar/>
-        <div className="audio_container">
-           <div className="audio_container1">
-            <div>
-              <button onClick={()=>{senddata()}} id="addtofav">Add to Favourite</button>
-            </div>
-              <div className="audio_container11">
-                  <img className="main_image" src={songdata.cover_image} />
-              </div>
-               <div className="audio_container12">
-                    <p className="songdetails"><label className="spa">Song Name:   </label>{songdata.song}</p>
-                    <p className="songdetails"><label className="spa">Artists:  </label>{songdata.artists}</p>
-                    <p className="songdetails"><label className="spa">Duration:  </label>{songdata.duration}</p>
-                  <div className="play">
-                     <audio src={songdata.url} controls autoPlay preload="metadata" >
-                        <source src={songdata.url}/>
-                     </audio>
-            </div>
-               </div>
-           </div>
-              
-                {/* <div className="audio_container2">
-               {data.map((elem)=>{
-               return(
-                   <div className="audio_container21">
-                         <div className="audio_container211"><img onClick={()=>{display(elem.id)}} className="audio_container2_img" src={elem.cover_image}/></div> 
-                          <div className="audio_container212"><label onClick={()=>{display(elem.id)}} className="songname">{elem.song}</label></div>
+
+return(
+       <div>
+           <div className="audio_container">
+               <div className="audio_container1">
+                  <div>
+                       <button onClick={()=>{
+                         if(status){
+                          let obj=playarr[0];
+                          delete obj._id;
+                          senddata(obj)}
+                          else{alert("please login to your account")}}} id="addtofav">Add to Favourite
+                       </button>
+                  </div>
+                   <div className="audio_container11">
+                     <img className="main_image" src={playarr[0].cover_image} />
                    </div>
-               )
-              })} 
-           </div> */}
-          
-        </div>
-
-            
-        </div>
+                   <div className="audio_container12">
+                      <p className="songdetails"><label className="spa">Song Name:   </label>{playarr[0].song}</p>
+                      <p className="songdetails"><label className="spa">Artists:  </label>{playarr[0].artists}</p>
+                      <p className="songdetails"><label className="spa">Duration:  </label>{playarr[0].duration}</p>
+                      <div className="play">
+                           <audio src={playarr[0].url} controls autoPlay preload="metadata" >
+                              <source src={playarr[0].url}/>
+                           </audio>
+                      </div>
+                   </div>
+               </div> 
+            </div>
+       </div>
     )
 }

@@ -17,8 +17,6 @@ const playsong=allsongs.filter((elem)=>{
 })
  return(
     <div>
-        <Header/>
-        <Navbar/>
         <div className="audio_container">
            <div className="audio_container1">
               <div className="audio_container11">

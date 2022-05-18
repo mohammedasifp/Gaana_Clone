@@ -13,8 +13,13 @@
 .nav_links>a:hover{
     text-decoration: underline red;
 }
-
-@media only screen and (max-width: 480px){
+.nav-fav{
+    cursor: pointer;
+}
+.nav-fav:hover{
+    text-decoration: underline red;
+}
+@media only screen and (max-width: 700px){
     .nav_links{
          opacity: 0;
          margin-top: 0px;

@@ -18,7 +18,7 @@
    margin-left: 6%;
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(4,1fr);
     row-gap: 10px;
  }
  .newimg{
@@ -47,7 +47,13 @@
     cursor: pointer;
     font-weight: bold;
 }
-@media only screen and (max-width:480px){
+#addtofav:active {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
+}
+@media only screen and (max-width:700px){
     .new_Container{
         width: 80%;
        margin-left: 1%;
@@ -64,6 +70,9 @@
         border-radius: 5px;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     
+    }
+    #addtofav{
+        position: fixed;
     }
    
 }

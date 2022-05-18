@@ -10,10 +10,10 @@ export const Favourite=()=>{
 const token=useSelector(store=>store.login.user.token)
 const navigate=useNavigate();
     if(!token){
-       navigate("/login") 
+       navigate("/") 
     } 
 const userid=useSelector(store=>store.login.user.user._id)
-console.log(userid)
+// console.log(userid)
 const [favdata,setFavdata]=useState([]);
 useEffect(()=>{
    fetchdata();
@@ -30,8 +30,7 @@ const deletefun=(id)=>{
 
     return(
         <div>
-            <Header/>
-            <Navbar/>
+
             <div className="favcontainer">
                 {favdata.map((elem)=>{
                     return(
